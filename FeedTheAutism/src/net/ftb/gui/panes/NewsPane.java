@@ -34,7 +34,7 @@ public class NewsPane extends JPanel implements ILauncherPane {
 	@Override
 	public void onVisible() {
 		try {
-			news.setPage("http://launcher.feed-the-beast.com/news.php");
+			news.setPage("http://mtss.blindrein.com/getdate");
 			Settings.getSettings().setNewsDate();
 			Settings.getSettings().save();
 			LaunchFrame.getInstance().setTabbedPaneIcons();

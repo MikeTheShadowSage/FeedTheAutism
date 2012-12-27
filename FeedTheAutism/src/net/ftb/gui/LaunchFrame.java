@@ -91,7 +91,6 @@ public class LaunchFrame extends JFrame {
 	private static String[] dropdown_ = {"Select Profile", "Create Profile"};
 	private static JComboBox users, tpInstallLocation, mapInstallLocation;
 	private static LaunchFrame instance = null;
-	//TODO 
 	private static String version = "0.0.1";
 	private static final long serialVersionUID = 1L;
 
@@ -220,7 +219,7 @@ public class LaunchFrame extends JFrame {
 	public LaunchFrame(final int tab) {
 		setFont(new Font("a_FuturaOrto", Font.PLAIN, 12));
 		setResizable(false);
-		setTitle("Feed The Autism Launcher v" + version);
+		setTitle("Feed The Autism v" + version);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(this.getClass().getResource("/image/logo_ftb.png")));
 
 		panel = new JPanel();
@@ -236,14 +235,14 @@ public class LaunchFrame extends JFrame {
 		panel.add(tabbedPane);
 		panel.add(footer);
 		setContentPane(panel);
-		//TODO
+
 		//Footer
 		footerLogo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		footerLogo.setBounds(20, 20, 42, 42);
 		footerLogo.addMouseListener(new MouseListener() {
 			@Override
 			public void mouseClicked(MouseEvent event) {
-				OSUtils.browse("http://blindrein.com");
+				OSUtils.browse("http://mtss.blindrein.com/minecraft-redirect");
 			}
 			@Override public void mouseReleased(MouseEvent arg0) { }
 			@Override public void mousePressed(MouseEvent arg0) { }
@@ -255,10 +254,8 @@ public class LaunchFrame extends JFrame {
 		footerCreeper.setBounds(72, 20, 132, 42);
 		footerCreeper.addMouseListener(new MouseListener() {
 			@Override
-			
-	//FIXME
 			public void mouseClicked(MouseEvent event) {
-				OSUtils.browse("http://blindrein.com");
+				OSUtils.browse("http://www.creeperhost.net/aff.php?aff=293");
 			}
 			@Override public void mouseReleased(MouseEvent arg0) { }
 			@Override public void mousePressed(MouseEvent arg0) { }

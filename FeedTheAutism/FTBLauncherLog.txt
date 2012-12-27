@@ -1,0 +1,44 @@
+[19:41:47] [INFO] OptionsPane.<init>:140: [i18n] Added 0 enUS to options pane
+[19:41:47] [INFO] OptionsPane.getDownloadServerNames:254: Servers are loaded, inserting into combo box.
+[19:41:47] [INFO] DownloadUtils.getStaticCreeperhostLink:78: http://mtss.blindrein.com/direct/mikepack/locales
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: read: 1349783312,1353367177,1350332671,1352586212,1353540437,1354638631,1354657742,1355760628,1352326379,1355261920,
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 0
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1349783312
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1353367177
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1350332671
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1352586212
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1353540437
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1354638631
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1354657742
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1355760628
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1352326379
+[19:41:48] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1355261920
+[19:41:48] [INFO] MapLoader.run:24: loading map information...
+[19:41:48] [INFO] DownloadUtils.getStaticCreeperhostLink:78: http://mtss.blindrein.com/direct/mikepack/modpacks.xml
+[19:41:48] [INFO] DownloadUtils.getStaticCreeperhostLink:78: http://mtss.blindrein.com/direct/mikepack/maps.xml
+[19:41:48] [INFO] DownloadUtils.getStaticCreeperhostLink:78: http://mtss.blindrein.com/direct/mikepack/version.xml
+[19:41:48] [INFO] HttpURLConnection.getInputStream:-1->LocaleUpdater.run:69: [i18n] Could not retrieve version info, skipping update.: java.io.IOException: Server returned HTTP response code: 403 for URL: http://mtss.blindrein.com/direct/mikepack/locales/
+sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+net.ftb.locale.LocaleUpdater.run(LocaleUpdater.java:62)
+[19:41:48] [INFO] ModpackLoader.run:46: loading modpack information for modpacks.xml...
+[19:41:48] [INFO] ModpacksPane.addPack:176: Adding pack 0
+[19:41:51] [INFO] LaunchFrame.doLogin:476: Logging in...
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: read: 1349783312,1353367177,1350332671,1352586212,1353540437,1354638631,1354657742,1355760628,1352326379,1355261920,
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 0
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1349783312
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1353367177
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1350332671
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1352586212
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1353540437
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1354638631
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1354657742
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1355760628
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1352326379
+[19:41:52] [INFO] LauncherConsole$OutputOverride.write:73: From Console: 1355261920
+[19:42:01] [INFO] LaunchFrame$13.done:534: Login complete.
+[19:42:01] [INFO] LaunchFrame.initializeMods:804: FTBBETAA
+[19:42:01] [INFO] ModManager$ModManagerWorker.downloadModPack:96: Downloading mod pack.
+[19:42:02] [INFO] DownloadUtils.getCreeperhostLink:52: http://mtss.blindrein.com/direct/mikepack/modpacks%5EFTBBETAA%5E12%5EFTAAlphaA.zip
+[19:42:02] [INFO] LaunchFrame.installMods:668: dirs mk'd
+[19:42:02] [INFO] GameUpdateWorker.loadJarURLs:59: Loading Jar URLs
+[19:42:02] [INFO] GameUpdateWorker.doInBackground:44: Downloading Jars

@@ -34,16 +34,16 @@ public class DownloadUtils extends Thread {
 	 */
 	public static String getCreeperhostLink(String file) throws NoSuchAlgorithmException {
 		if(currentmd5.isEmpty()) {
-			currentmd5 = md5("mcepoch1" + getTime());
+			currentmd5 = md5("mcepoch1");
 		}
 		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "http://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "mtss.blindrein.com";
-		resolved += "/direct/mikepack/" + currentmd5 + "/" + file;
+		resolved += "/direct/mikepack/" + file;
 		HttpURLConnection connection = null;
 		try {
 			connection = (HttpURLConnection) new URL(resolved).openConnection();
 			for(String server : downloadServers.values()) {
 				if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("mtss.blindrein.com")) {
-					resolved = "http://" + server + "/direct/mikepack/" + currentmd5 + "/" + file;
+					resolved = "http://" + server + "/direct/mikepack/" + file;
 					connection = (HttpURLConnection) new URL(resolved).openConnection();
 				}
 			}
@@ -189,6 +189,7 @@ public class DownloadUtils extends Thread {
 				for(String server : downloadServers.values()) {
 					if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("mtss.blindrein.com")) {
 						resolved = "http://" + server + "/md5/mikepack/" + url;
+						System.out.println(url);
 						connection = (HttpURLConnection) new URL(resolved).openConnection();
 					} else if(connection.getResponseCode() == 200) {
 						break;
@@ -248,7 +249,7 @@ public class DownloadUtils extends Thread {
 		downloadServers.put("Automatic", "mtss.blindrein.com");
 		BufferedReader in = null;
 		try {
-			in = new BufferedReader(new InputStreamReader(new URL("mtss.blindrein.com").openStream()));
+			in = new BufferedReader(new InputStreamReader(new URL("http://mtss.blindrein.com/mirror").openStream()));
 			String line;
 			while((line = in.readLine()) != null) {
 				String[] splitString = line.split(",");

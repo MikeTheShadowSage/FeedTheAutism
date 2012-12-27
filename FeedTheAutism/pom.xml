@@ -4,7 +4,7 @@
 
   <groupId>net.ftb</groupId>
   <artifactId>FTB_Launcher</artifactId>
-  <version>1.1.8</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
   <properties>
     <buildNumber>0</buildNumber>
@@ -13,8 +13,8 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <name>FTB Launcher</name>
-  <url>https://github.com/Slowpoke101/FTBLaunch</url>
+  <name>FeedTheAutism Launcher</name>
+  <url>https://github.com/MikeTheShadowSage/FeedTheAutism</url>
 
   <build>
     <defaultGoal>clean install package</defaultGoal>

@@ -36,7 +36,7 @@ public class TextureManager extends JDialog {
 	private final JLabel label;
 	public static boolean overwrite = false;
 	private static String sep = File.separator;
-	public static String installDir = "FTBBETAA";
+	public static String installDir = "FTABETAA";
 
 	private class TexturePackManagerWorker extends SwingWorker<Boolean, Void> {
 		@Override
