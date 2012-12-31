@@ -36,14 +36,14 @@ public class DownloadUtils extends Thread {
 		if(currentmd5.isEmpty()) {
 			currentmd5 = md5("mcepoch1");
 		}
-		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "http://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "mtss.blindrein.com";
-		resolved += "/direct/mikepack/" + file;
+		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "https://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "dl.dropbox.com/u/37008740/mikepack/";
+		resolved += "" + file;
 		HttpURLConnection connection = null;
 		try {
 			connection = (HttpURLConnection) new URL(resolved).openConnection();
 			for(String server : downloadServers.values()) {
-				if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("mtss.blindrein.com")) {
-					resolved = "http://" + server + "/direct/mikepack/" + file;
+				if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("dl.dropbox.com/u/37008740/mikepack/")) {
+					resolved = "https://" + server + "" + file;
 					connection = (HttpURLConnection) new URL(resolved).openConnection();
 				}
 			}
@@ -58,15 +58,15 @@ public class DownloadUtils extends Thread {
 	 * @return - the direct link
 	 */
 	public static String getStaticCreeperhostLink(String file) {
-		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "http://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "mtss.blindrein.com";
-		resolved += "/direct/mikepack/" + file;
+		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "https://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "dl.dropbox.com/u/37008740/mikepack/";
+		resolved += "" + file;
 		HttpURLConnection connection = null;
 		try {
 			connection = (HttpURLConnection) new URL(resolved).openConnection();
 			if(connection.getResponseCode() != 200) {
 				for(String server : downloadServers.values()) {
-					if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("mtss.blindrein.com")) {
-						resolved = "http://" + server + "/direct/mikepack/" + file;
+					if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("dl.dropbox.com/u/37008740/mikepack/")) {
+						resolved = "https://" + server + "" + file;
 						connection = (HttpURLConnection) new URL(resolved).openConnection();
 					} else if(connection.getResponseCode() == 200) {
 						break;
@@ -180,14 +180,14 @@ public class DownloadUtils extends Thread {
 	public static boolean isValid(File file, String url) throws IOException {
 		String content = null;
 		Scanner scanner = null;
-		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "http://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "mtss.blindrein.com";
+		String resolved = (downloadServers.containsKey(Settings.getSettings().getDownloadServer())) ? "http://" + downloadServers.get(Settings.getSettings().getDownloadServer()) : "dl.dropbox.com/u/37008740/mikepack/";
 		resolved += "/md5/mikepack/" + url;
 		HttpURLConnection connection = null;
 		try {
 			connection = (HttpURLConnection) new URL(resolved).openConnection();
 			if(connection.getResponseCode() != 200) {
 				for(String server : downloadServers.values()) {
-					if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("mtss.blindrein.com")) {
+					if(connection.getResponseCode() != 200 && !server.equalsIgnoreCase("dl.dropbox.com/u/37008740/mikepack/")) {
 						resolved = "http://" + server + "/md5/mikepack/" + url;
 						System.out.println(url);
 						connection = (HttpURLConnection) new URL(resolved).openConnection();
@@ -246,10 +246,10 @@ public class DownloadUtils extends Thread {
 	 */
 	@Override
 	public void run() {
-		downloadServers.put("Automatic", "mtss.blindrein.com");
+		downloadServers.put("Automatic", "dl.dropbox.com/u/37008740/mikepack/");
 		BufferedReader in = null;
 		try {
-			in = new BufferedReader(new InputStreamReader(new URL("http://mtss.blindrein.com/mirror").openStream()));
+			in = new BufferedReader(new InputStreamReader(new URL("").openStream()));
 			String line;
 			while((line = in.readLine()) != null) {
 				String[] splitString = line.split(",");

@@ -46,11 +46,11 @@ public class OSUtils {
 	public static String getDynamicStorageLocation() {
 		switch(getCurrentOS()) {
 		case WINDOWS:
-			return System.getenv("APPDATA") + "/ftblauncher/";
+			return System.getenv("APPDATA") + "/ftalauncher/";
 		case MACOSX:
-			return System.getProperty("user.home") + "/Library/Application Support/ftblauncher/";
+			return System.getProperty("user.home") + "/Library/Application Support/ftalauncher/";
 		case UNIX:
-			return System.getProperty("user.home") + "/.ftblauncher/";
+			return System.getProperty("user.home") + "/.ftalauncher/";
 		default:
 			return getDefInstallPath() + "/temp/";
 		}

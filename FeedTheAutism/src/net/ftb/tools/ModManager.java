@@ -100,12 +100,16 @@ public class ModManager extends JDialog {
 			File baseDynamic = new File(dynamicLoc, "ModPacks" + sep + dir + sep);
 			baseDynamic.mkdirs();
 			new File(baseDynamic, modPackName).createNewFile();
-			downloadUrl(baseDynamic.getPath() + sep + modPackName, DownloadUtils.getCreeperhostLink("modpacks%5E" + dir + "%5E" + curVersion + "%5E" + modPackName));
+			downloadUrl(baseDynamic.getPath() + sep + modPackName, DownloadUtils.getCreeperhostLink(modPackName));
 			String animation = pack.getAnimation();
+			FileUtils.extractZipTo(baseDynamic.getPath() + sep + modPackName, baseDynamic.getPath());
+			clearModsFolder(pack);
+			FileUtils.delete(new File(installPath, dir + "/minecraft/coremods"));
+			FileUtils.delete(new File(installPath, dir + "/instMods/"));
 			if(!animation.equalsIgnoreCase("empty")) {
-				downloadUrl(baseDynamic.getPath() + sep + animation, DownloadUtils.getCreeperhostLink("modpacks%5E" + dir + "%5E" + curVersion + "%5E" + animation));
+				downloadUrl(baseDynamic.getPath() + sep + animation, DownloadUtils.getCreeperhostLink(animation));
 			}
-			if(DownloadUtils.isValid(new File(baseDynamic, modPackName), "modpacks%5E" + dir + "%5E" + curVersion + "%5E" + modPackName)) {
+			if(DownloadUtils.isValid(new File(baseDynamic, modPackName), modPackName)) {
 				FileUtils.extractZipTo(baseDynamic.getPath() + sep + modPackName, baseDynamic.getPath());
 				clearModsFolder(pack);
 				FileUtils.delete(new File(installPath, dir + "/minecraft/coremods"));
@@ -119,6 +123,8 @@ public class ModManager extends JDialog {
 	}
 
 	/**
+	 * 
+	 *  downloadUrl(baseDynamic.getPath() + sep + modPackName, DownloadUtils.getCreeperhostLink("modpacks%5E" + dir + "%5E" + curVersion + "%5E" + modPackName));
 	 * Create the frame.
 	 */
 	public ModManager(JFrame owner, Boolean model) {

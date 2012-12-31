@@ -33,7 +33,7 @@ public class Settings extends Properties {
 	private boolean forceUpdate = false;
 
 	static {
-		File cfgFile = new File(OSUtils.getDynamicStorageLocation(), "ftblaunch.cfg");
+		File cfgFile = new File(OSUtils.getDynamicStorageLocation(), "ftalauncher.cfg");
 		try {
 			settings = new Settings(cfgFile);
 		} catch (IOException e) {
